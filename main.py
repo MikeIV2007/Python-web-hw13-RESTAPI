@@ -17,11 +17,7 @@ from src.database.connect import get_db
 from src.routes import contacts, auth, users
 from src.conf.config import settings
 
-
-
-
 app = FastAPI()
-
 
 @app.middleware("http")
 async def add_process_time_header(request: Request, call_next):
